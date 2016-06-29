@@ -6,7 +6,7 @@
 	 version="3.1">
     <session-config>
         <session-timeout>
-            300000000000000000000000000000000000000000000000000000000
+            30000000000000065444444444444444444444444444444
         </session-timeout>
     </session-config>
 </web-app>
