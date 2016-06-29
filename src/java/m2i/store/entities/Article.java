@@ -22,6 +22,11 @@ public class Article implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    private String nom;
+    private Integer stock;
+    private long prix;
+    
 
     public Long getId() {
         return id;
