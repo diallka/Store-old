@@ -5,6 +5,7 @@
  */
 package m2i.store.services;
 
+import java.util.List;
 import m2i.store.dao.UtilisateurDAO;
 import m2i.store.entities.Utilisateur;
 
@@ -14,9 +15,22 @@ import m2i.store.entities.Utilisateur;
  */
 public class UtilisateurService {
 
+    //On recherche un utilisateur existant pour le connecter
     public Utilisateur rechercheParLoginEtMdp(String login, String mdp) {
    
         return new UtilisateurDAO().rechercheParLoginEtMdp(login, mdp);
+    }
+
+    //On gere la verifiaction et l'inscription
+    public void inscription(Utilisateur util) {
+        UtilisateurDAO dao = new UtilisateurDAO();
+        //On verifie le nouveau login, s'il existe on renvoit une erreur,
+        List<Utilisateur> listeUtilAvecCeLogin = dao.rechercheParLoginEtMdp(util.getLogin());
+        if(listeUtilAvecCeLogin.size() > 0)
+            throw new RuntimeException("Ce login existe dejà");
+        
+        // s'il n'existe pas on le crée
+        dao.creerUtilisateur(util);
     }
     
     

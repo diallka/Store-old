@@ -35,15 +35,8 @@ public class ConnexionUtilisateurServlet extends HttpServlet {
 
         request.getSession().setAttribute("utilConnecte", util);
 
-//        response.addCookie(new Cookie("util_type", util.getTypeUtil().toString()));
-//        //Utilisateur.TypeUtil.values(); //Récupere toutes les valeurs de typeUtil et itérer dessus
-//        response.addCookie(new Cookie("login", login));
-//        response.addCookie(new Cookie("mdp", mdp));
-        //Je suis loggé correctement
-        //Rédirection vers listage de films
-        
         //response.sendRedirect("espace_personnel?connecte=vrai");
-        response.sendRedirect("ajout_article");
+        response.sendRedirect("espace_personnel?connecte=vrai");
 
     }
 

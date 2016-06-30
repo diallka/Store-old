@@ -6,12 +6,13 @@
 package m2i.store.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import m2i.store.entities.Utilisateur;
+import m2i.store.services.UtilisateurService;
 
 /**
  *
@@ -27,13 +28,13 @@ public class InscriptionUtilisateurServlet extends HttpServlet {
         String login = request.getParameter("login");
         String mdp = request.getParameter("mdp");
 
-       // Utilisateur util = new Utilisateur();
-        //util.setLogin(login);
-        //util.setMdp(mdp);
+        Utilisateur util = new Utilisateur();
+        util.setLogin(login);
+        util.setMdp(mdp);
 
         //util.getEtatUtil(Utilisateur.EtatUtil.VALIDE);
         //Vérifier si utilisateur existe en BDD
-//        new UtilisateurService().inscription(util);
+        new UtilisateurService().inscription(util);
 //
 //        //Envoi email
 //        String mailDest = request.getParameter(email);
@@ -42,7 +43,7 @@ public class InscriptionUtilisateurServlet extends HttpServlet {
 //
 //        new UtilisateurService().envoyerMail(mailDest, titre, msg);
         //Rédirection vers 
-        response.sendRedirect("espace_personnel");
+        response.sendRedirect("connecter_utilisateur");
 
     }
 

@@ -27,11 +27,11 @@ public class ArticleDAO {
        
     }
 
-//    public List<Article> lister() {
-//        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//        
-//        return em.createQuery("SELECT a FROM Article a").getResultList();
-//    }
+    public List<Article> lister() {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        
+        return em.createQuery("SELECT a FROM Article a ORDER BY a.nom").getResultList();
+    }
 
     
     

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : inscription_utilisateur
-    Created on : 29 juin 2016, 18:32:33
+    Document   : lister_articles
+    Created on : 30 juin 2016, 11:09:20
     Author     : Pro
 --%>
 
@@ -18,25 +18,19 @@
     </head>
     <body>
         <div class="titre">
-            <c:import url="_TITLE.jsp" /> 
+           <c:import url="_TITLE.jsp" /> 
         </div>
         <div class="menu">
             <c:import url="_MENU.jsp" />
         </div>
         <div class="contenu">
-            <h1>Incription</h1>
-
-            <form method="post">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Identifiant:</label>
-                    <input name="login" type="text" placeholder="identifiant">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Mot de passe:</label>
-                    <input  name="mdp" type="password"  placeholder="mot de passe">
-                </div>
-                <button type="submit"  class="btn btn-default">Valider</button>
-            </form>
+            
+            <h4>Liste articlespar ordre A-Z <br/>designation/prix/stock</h4>
+            <c:forEach items="${articles}" var="article">
+                ${article.nom} &nbsp&nbsp ${article.prix} &nbsp&nbsp ${article.stock} <br/>
+                
+            </c:forEach>
+                
         </div>
         <div class="pied">
             <c:import url="_FOOTER.jsp" />

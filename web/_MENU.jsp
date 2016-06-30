@@ -5,26 +5,25 @@
 --%>
 
 
+
 <div>
   <table>
     <tr>
-      
-    
-    
+     
     <c:choose>
-        <c:when test="${utilConnecte.login==null}">
-            <th><a href="connexion_utilisateur">Connexion</a></th>
+        <c:when test="${utilConnecte.typeUtil == 'ADMIN'}">
+            <th><a href="espace_personnel">Espace perso</a>***</th>
+            <th><a href="ajouter_article">Ajouter articles</a>***</th>
+            <th><a href="lister_articles">Lister articles</a>***</th>
         </c:when>
-        <c:otherwise>
-            <a href="deconnexion_utilisateur">Déconnexion</a></th> 
-            <c:if test="${utilConnecte.typeUtil == 'ADMIN'}">
-                
-                <%--Mettre menu admin--%>
-            
-            </c:if>
-        </c:otherwise>
+       
+            <a href="deconnecter_utilisateur">Déconnexion</a></th> 
+        
+       
     </c:choose>
+    
     
 </tr>
   </table>
-</div>
+</div>      
+            <hr>

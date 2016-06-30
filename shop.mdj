@@ -2738,7 +2738,7 @@
 									"containerExtending": false,
 									"left": 393.5,
 									"top": 172.5,
-									"width": 239.01708984375,
+									"width": 239,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -3680,7 +3680,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "Finaliser son pannier",
+											"text": "Finaliser son panier",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5
 										},
@@ -5063,7 +5063,7 @@
 									"containerExtending": false,
 									"left": 372,
 									"top": 92.5,
-									"width": 249.12255859375,
+									"width": 250,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -6198,7 +6198,7 @@
 									"containerExtending": false,
 									"left": 416.5,
 									"top": 612.5,
-									"width": 116.9072265625,
+									"width": 117,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -7955,7 +7955,7 @@
 									"containerExtending": false,
 									"left": 325,
 									"top": 420.5,
-									"width": 332,
+									"width": 333,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -8678,7 +8678,7 @@
 									"containerExtending": false,
 									"left": 394.5,
 									"top": 476.5,
-									"width": 164,
+									"width": 165,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -9685,7 +9685,7 @@
 									"containerExtending": false,
 									"left": 390.5,
 									"top": 676.5,
-									"width": 184.814453125,
+									"width": 185,
 									"height": 25,
 									"autoResize": false,
 									"stereotypeLabel": {
@@ -11458,7 +11458,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Finaliser son pannier",
+					"name": "Finaliser son panier",
 					"visibility": "public",
 					"isAbstract": false,
 					"isFinalSpecialization": false,

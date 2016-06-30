@@ -25,12 +25,12 @@ import javax.persistence.OneToMany;
 public class Utilisateur implements Serializable {
     
     //Définition enum UtilType
-//    private enum TypeUtil {
-//        ADMIN,
-//        EQUIPE_EXP,
-//        CLIENT,
-//        VISITEUR;
-//    }
+    public enum TypeUtil {
+        ADMIN,
+        EQUIPE_EXP,
+        CLIENT,
+        VISITEUR;
+    }
     //********************************
     //Instanciation
     private static final long serialVersionUID = 1L;
@@ -40,8 +40,8 @@ public class Utilisateur implements Serializable {
     private String login;
     private String mdp;
     
-//    @Enumerated(EnumType.STRING)
-//    public TypeUtil typeUtil;
+    @Enumerated(EnumType.STRING)
+    public TypeUtil typeUtil;
     
     private String adresseLivraison;
     
@@ -50,6 +50,9 @@ public class Utilisateur implements Serializable {
     private List<Commande> commandes = new ArrayList<>();
     
     
+    
+    //**********************************
+    //Getter et Setter
     public Long getId() {
         return id;
     }
@@ -88,11 +91,18 @@ public class Utilisateur implements Serializable {
         return commandes;
     }
 
-    //**********************************
-    //Getter et Setter
     public void setCommandes(List<Commande> commandes) {
         this.commandes = commandes;
     }
+
+    public TypeUtil getTypeUtil() {
+        return typeUtil;
+    }
+
+    public void setTypeUtil(TypeUtil typeUtil) {
+        this.typeUtil = typeUtil;
+    }
+    
 
     @Override
     public String toString() {

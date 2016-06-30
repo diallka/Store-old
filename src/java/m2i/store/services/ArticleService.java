@@ -23,9 +23,9 @@ public class ArticleService {
      }
      //
 
-//    public List<Article> listerArticle() {
-//        return new ArticleDAO().lister();
-//    }
+    public List<Article> listerArticle() {
+        return new ArticleDAO().lister();
+    }
     
     
 }

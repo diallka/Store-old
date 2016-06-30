@@ -18,12 +18,7 @@
         <c:import url="_HEADER.jsp" />
     </head>
     <body>
-        <div class="titre">
-            <c:import url="_TITLE.jsp" /> 
-        </div>
-        <div class="menu">
-            <c:import url="_MENU.jsp" />
-        </div>
+
         <div class="contenu">
             <h3>Authentification</h3>
 
